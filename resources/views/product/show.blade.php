@@ -1,6 +1,7 @@
 @extends('layouts.app')
 @section('title') {{$productShow->name}} @endsection
 @section('content')
+    @include("category.category")
     <div class="d-flex justify-content-around bg-primary bg-opacity-10 h-100">
         <img class="m-3 rounded border shadow h-25 w-25 col-8" src="{{$productShow->getImage()}}">
         <div class="d-flex flex-column my-5 col-6">

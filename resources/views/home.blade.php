@@ -15,15 +15,7 @@
 </section>
 
 <div class="container-xl">
-    <div class="row justify-content-center my-3">
-        @foreach($brands as $brand)
-        <div class="col-auto">
-            <a class="text-decoration-none" href="">
-                <img src="img/brand/{{$brand->image}}"class="img-fluid bg-dark rounded my-2">
-            </a>
-        </div>
-            @endforeach
-    </div>
+    @include("brand.brand")
 </div>
 
 <div class="container-xl">

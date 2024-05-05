@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\Models\Brand;
 use App\Models\Category;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Pagination\Paginator;
@@ -33,6 +34,15 @@ class AppServiceProvider extends ServiceProvider
 
             return $view->with([
                 'categories' => $categories,
+            ]);
+        });
+        View::composer('brand.brand', function ($view) {
+
+            $brands = Brand::orderBy('id')
+                ->get();
+
+            return $view->with([
+                'brands' => $brands,
             ]);
         });
     }
