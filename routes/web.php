@@ -19,7 +19,7 @@ Route::controller(CategoryController::class)
     ->group(function (){
         Route::get('/category/{id}', 'index')->name('category')->where('id', '[0-9]+');
     });
-Route::controller(CategoryController::class)
-    ->group(function (){
-        Route::get('/category/{id}', 'index')->name('category')->where('id', '[0-9]+');
-    });
+//Route::controller(CategoryController::class)
+//    ->group(function (){
+//        Route::get('/category/{id}', 'index')->name('category')->where('id', '[0-9]+');
+//    });
